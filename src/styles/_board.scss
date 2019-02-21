@@ -1,9 +1,13 @@
 #board {
-  font-family: Arial,sans-serif;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
   width: 600px;
   display: grid;
   height: 600px;
   grid-gap: 1px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  box-shadow: 0px 0px 300px 80px rgba(0, 0, 0, 0.8);
 
   .field {
     display: flex;
@@ -13,31 +17,33 @@
     transition: background-color ease-in-out .1s;
 
     &.hidden {
-      background-color: #00C4CC;
+      background-color: #ffffffe8;
     }
 
     &.not-mine {
-      background-color: #AFEFE1;
+      background-color: rgba(255, 255, 255, 0.33);
+      color: white;
     }
 
     &.mine {
-      background-color: rgba(0, 0, 0, 0.79);
+      background-color: rgba(0, 0, 0, 0.91);
+
       &:after {
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
         content: "\f1e2";
-        color: rgb(255, 81, 83);
+        color: rgba(203, 11, 36, 0.93);
       }
     }
 
     &.marked {
-      background-color: #566f7d;
+      background-color: rgba(1, 106, 154, 0.9);
 
       &:after {
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
         content: "\f024";
-        color: #afefe1;
+        color: rgba(164, 207, 216, 1);
       }
     }
   }
