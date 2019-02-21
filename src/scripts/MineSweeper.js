@@ -90,7 +90,6 @@ export default class MineSweeper {
                 this.play();
             }
         }, 100);
-        this._showMines();
     }
 
     /**
