@@ -59,7 +59,7 @@ export default class Field {
             this.sweeper.checkStatus(this);
         }
         this._el.classList.remove('marked');
-        el.removeEventListener('click', this.show);
+        el.removeEventListener('click', this._clickHandler);
     }
 
     /**
